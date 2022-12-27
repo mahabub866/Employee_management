@@ -1,0 +1,6 @@
+flask
+flask_sqlalchemy
+uuid
+werkzeug
+PyJWT==1.7.0
+flask_mysqldb
