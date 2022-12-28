@@ -82,10 +82,10 @@ def token_required(f):
             current_user = User.query.filter_by(public_id=data['public_id']).first()
         except:
             return jsonify({'message' : 'Token is invalid!'}), 401
-        print(f,'//////////////////')
+        # print(f,'//////////////////')
 
         return f(current_user, *args, **kwargs)
-    print(decorated,".............")
+    # print(decorated,".............")
 
     return decorated
 # end token process
@@ -274,8 +274,8 @@ def login():
 
 #     return jsonify({'message' : 'Todo item deleted!'})
 
-with app.app_context():
-    db.create_all()
+# with app.app_context():
+#     db.create_all()
 
 if __name__ == '__main__':
     app.run(debug=True)
